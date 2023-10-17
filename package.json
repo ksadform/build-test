@@ -1,0 +1,12 @@
+{
+  "name": "build-test",
+  "version": "1.0.0",
+  "author": "Keval Solanki <Keval.Solanki@adform.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "cd lib-1 && yarn build && cd .. && cd lib-2 && yarn build && cd .. && cd app && yarn build",
+    "install:all": "cd lib-1 && yarn && cd .. && cd lib-2 && yarn && cd .. && cd app && yarn"
+
+  }
+
+}
