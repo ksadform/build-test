@@ -8,7 +8,8 @@
     "install:all": "cd lib-1 && yarn && cd .. && cd lib-2 && yarn && cd .. && cd app && yarn",
     "link:all": "cd lib-1 && yarn unlink && yarn link && cd .. && cd lib-2 && yarn unlink lib-1 && yarn link lib-1 && yarn unlink && yarn link && cd .. && cd app && yarn unlink lib-1 && yarn link lib-1 && yarn unlink lib-2 && yarn link lib-2",
     "run:all": "yarn install:all && yarn link:all && yarn build:all",
-    "stat": "node scripts/size.js"
+    "stat": "node scripts/stat.js",
+    "build:stat": "yarn build:all && yarn stat"
   }
 
 }
